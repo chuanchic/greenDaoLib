@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
 
 android {
     compileSdkVersion 27
@@ -18,6 +19,12 @@ android {
     }
 }
 
+greendao {
+    schemaVersion 1//指定数据库schema版本号，迁移等操作会用到
+    daoPackage 'com.greendao.gen'//通过gradle插件生成的数据库相关文件的包名，默认为entity所在的包名
+    targetGenDir 'src/main/java'//自定义生成数据库文件的目录，可以将生成的文件放到java目录中，而不是build中，这样就不用额外的设置资源目录了
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'
@@ -25,4 +32,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'org.greenrobot:greendao:3.2.2' // add library
 }

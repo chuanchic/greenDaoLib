@@ -1,18 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</android.support.constraint.ConstraintLayout>
+        android:scrollbars="none"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:overScrollMode="never">
+            <TextView
+                android:id="@+id/tv_insert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text="插入单条数据"
+                android:textSize="17sp"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:id="@+id/tv_insertMul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text="插入多条数据"
+                android:textSize="17sp"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:id="@+id/tv_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text="修改单条数据"
+                android:textSize="17sp"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text="删除单条数据"
+                android:textSize="17sp"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:id="@+id/tv_deleteAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text="删除所有数据"
+                android:textSize="17sp"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:id="@+id/tv_queryAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text="查询所有数据"
+                android:textSize="17sp"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:id="@+id/tv_query"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text="查询单条数据"
+                android:textSize="17sp"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:id="@+id/tv_query_native_sql"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text="使用queryBuilder进行条件查询"
+                android:textSize="17sp"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:id="@+id/tv_query_builder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text="使用queryBuilder进行条件查询"
+                android:textSize="17sp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
