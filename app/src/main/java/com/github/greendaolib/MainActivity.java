@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.github.greendaolib.entity.Person;
+import com.greendao.gen.DaoManager;
 import com.greendao.gen.PersonDaoUtil;
 
 import java.util.ArrayList;
@@ -108,5 +109,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        DaoManager.closeConnection();
     }
 }
